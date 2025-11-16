@@ -165,15 +165,15 @@ Performance com +500 mensagens
 
 Equipe de desenvolvimento:
 
-Maicon Bruno Corrêa da Silva
+Maicon Bruno Corrêa da Silva R.A: 24000795
 
-Antonio Tiago Zaneratto
+Antonio Tiago Zaneratto R.A: 24000696
 
-Flavio Perussi Bertão dos Reis
+Flavio Perussi Bertão dos Reis Reis RA: 24001465
 
-João Pedro Dutra da Silva
+João Pedro Dutra da Silva RA: 24000990
 
-Gabriel Trinca de Marchi
+Gabriel Trinca de Marchi RA: 24002112
 
 
 
