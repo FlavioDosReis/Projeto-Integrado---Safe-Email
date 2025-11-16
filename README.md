@@ -1,82 +1,155 @@
-SafeMail IA – Analisador de E-mails
+🛡️ SafeMail IA – Analisador de E-mails
+🔍 Análise Inteligente de Risco em Mensagens do Outlook
 
-O SafeMail IA é um sistema desenvolvido em Python para análise automática de e-mails no Outlook Desktop, classificando mensagens em Baixo, Médio ou Alto Risco de acordo com heurísticas de segurança, palavras-chave, anexos suspeitos e URLs potencialmente maliciosas.
 
-✅ Requisitos do Sistema
 
-Antes de executar o projeto, certifique-se de que o ambiente possui:
 
-Sistema Operacional
-Windows 10 ou superior
-(necessário para integração via MAPI/COM com o Outlook)
 
-Softwares
-Outlook Desktop instalado e configurado com uma conta ativa.
-Python 3.9 ou superior
 
-Bibliotecas Python necessárias
-Instale usando:
+
+
+
+
+
+
+📘 Sobre o Projeto
+
+O SafeMail IA é um analisador automático de risco para e-mails do Outlook Desktop, desenvolvido em Python.
+Ele identifica mensagens suspeitas, analisa anexos, URLs, padrões de phishing e aplica uma classificação baseada em risco (Baixo, Médio, Alto).
+
+O objetivo é aumentar a segurança corporativa, reduzir exposição a golpes e auxiliar usuários na tomada de decisão antes de abrir e-mails suspeitos.
+
+🚀 Funcionalidades
+
+📥 Leitura automática de e-mails via Outlook (MAPI/COM)
+
+🕵️ Detecção de padrões suspeitos:
+
+palavras-chave maliciosas
+
+URLs duvidosas
+
+anexos perigosos
+
+discrepâncias de remetente
+
+🧠 Pontuação heurística de risco (0 a 100)
+
+🟥 Classificação automática:
+
+Baixo risco
+
+Médio risco
+
+Alto risco
+
+📝 Geração de relatório CSV detalhado
+
+🏷️ Marcação automática no assunto do e-mail (opcional)
+
+🧩 Tecnologias Utilizadas
+Tecnologia	Finalidade
+Python 3.9+	Desenvolvimento principal
+PyWin32	Integração COM com Outlook
+difflib	Detecção de similaridade
+Regex (re)	Análise de URLs e padrões
+CSV	Exportação de relatórios
+Outlook Desktop	Origem dos e-mails analisados
+🔧 Requisitos
+Sistema
+
+Windows 10/11
+
+Outlook Desktop configurado
+
+Python 3.9+ instalado
+
+Instalação de dependências
 pip install pywin32
-(Outras bibliotecas como re, csv, difflib já fazem parte da biblioteca padrão do Python.)
 
-📦 Instalação
-1- Baixe ou clone o repositório do projeto:
+📦 Instalação do Projeto
+
+Clone o repositório:
 
 git clone https://github.com/seu-repositorio/safemail-ia.git
 
-2- Acesse a pasta do projeto:
+
+Acesse a pasta:
+
 cd safemail-ia
 
-3- Instale a dependência principal:
+
+Instale as dependências:
+
 pip install pywin32
 
-▶️ Como Executar a Aplicação
+▶️ Como Executar
 
-1- Abra o terminal na pasta do projeto.
-2- Execute o script principal:
+Execute o script principal:
+
 python analisador_de_risco_outlook.py
-3 -Certifique-se de que o Outlook esteja aberto ou configurado corretamente
-(o script usa a interface MAPI via COM).
 
-📊 Saída Gerada
 
-Após a execução, o sistema irá:
-Ler os e-mails da caixa Inbox (ou outra pasta configurada).
-Calcular pontuação de risco.
-Classificar cada e-mail em Baixo, Médio ou Alto risco.
-Gerar um arquivo CSV contendo:
-Data
-Assunto
-Remetente
-Anexos
+Certifique-se de que o Outlook esteja aberto ou configurado no Windows, pois o script acessa a caixa de entrada via MAPI.
+
+📊 Saídas do Sistema
+
+O script gera:
+
+✔ Relatório resultados.csv contendo:
+
+data
+
+remetente
+
+assunto
+
+anexos
+
 URLs
-Palavras suspeitas
-Pontuação
-Classificação
 
-O arquivo é salvo automaticamente na pasta do projeto.
+palavras suspeitas
 
-⚙️ Configurações Ajustáveis
+pontuação
 
-Dentro do código você pode configurar:
-Pasta de e-mails a analisar (default: Inbox)
+classificação final
+
+✔ Marcação no assunto:
+[Risco:ALTO] Assunto original
+
+⚙️ Configurações
+
+Dentro do código, você pode ajustar:
+
+Pasta alvo do Outlook
+
 Número máximo de e-mails
-Palavras-chave suspeitas
-Extensões perigosas
+
 Pesos das heurísticas
-Se deseja marcar o assunto do e-mail com:
-[Risco:ALTO] / [Risco:MÉDIO] / [Risco:BAIXO]
 
-❗ Observações Importantes
+Lista de palavras suspeitas
 
-O script não envia e-mails, apenas lê e marca mensagens.
-Não depende de consultas externas (WHOIS, APIs, etc.).
-Não modifica anexos, apenas os classifica.
-A classificação é baseada em heurísticas simples e pode ser aprimorada com IA na próxima versão.
+Extensões perigosas
+
+Ativar/desativar marcação no assunto
+
+🧪 Testes Realizados
+
+Outlook Desktop com conta ativa
+
+Teste com e-mails reais e simulados
+
+Links falsos (texto vs. URL real)
+
+Anexos perigosos (.exe, .js, .docm, etc.)
+
+E-mails corporativos legítimos
+
+Performance com +500 mensagens
 
 👨‍💻 Autores
 
-Projeto desenvolvido pelos alunos:
+Equipe de desenvolvimento:
 
 Maicon Bruno Corrêa da Silva
 
@@ -87,3 +160,15 @@ Flavio Perussi Bertão dos Reis
 João Pedro Dutra da Silva
 
 Gabriel Trinca de Marchi
+
+📈 Melhorias Futuras
+
+🤖 Implementação de rede neural ou modelo ML real
+
+🖥 Interface gráfica (dashboard de risco)
+
+📧 Compatibilidade com Gmail API
+
+🔍 Análise profunda de anexos (sandboxing)
+
+🧬 Algoritmos avançados de classificação
