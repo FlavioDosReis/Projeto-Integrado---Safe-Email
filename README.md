@@ -76,7 +76,7 @@ pip install pywin32
 
 Clone o repositório:
 
-git clone https://github.com/seu-repositorio/safemail-ia.git
+git clone https://github.com/FlavioDosReis/Projeto-Integrado---Safe-Email.git
 
 
 Acesse a pasta:
