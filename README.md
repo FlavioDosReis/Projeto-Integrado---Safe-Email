@@ -10,7 +10,7 @@ Ele identifica mensagens suspeitas, analisa anexos, URLs, padrões de phishing e
 
 O objetivo é aumentar a segurança corporativa, reduzir exposição a golpes e auxiliar usuários na tomada de decisão antes de abrir e-mails suspeitos.
 
-
+Vídeo : https://www.youtube.com/watch?v=GhhBC6kXxUc
 
 🚀 Funcionalidades
 
