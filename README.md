@@ -21,6 +21,7 @@ pip install pywin32
 
 📦 Instalação
 1- Baixe ou clone o repositório do projeto:
+
 git clone https://github.com/seu-repositorio/safemail-ia.git
 
 2- Acesse a pasta do projeto:
