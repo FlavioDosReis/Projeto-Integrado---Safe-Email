@@ -77,8 +77,13 @@ A classificação é baseada em heurísticas simples e pode ser aprimorada com I
 👨‍💻 Autores
 
 Projeto desenvolvido pelos alunos:
+
 Maicon Bruno Corrêa da Silva
+
 Antonio Tiago Zaneratto
+
 Flavio Perussi Bertão dos Reis
+
 João Pedro Dutra da Silva
+
 Gabriel Trinca de Marchi
