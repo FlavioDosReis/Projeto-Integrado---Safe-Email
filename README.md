@@ -43,6 +43,7 @@ Marcação automática no assunto do e-mail (opcional)
 
 
 🧩 Tecnologias Utilizadas
+
 Tecnologia	                  Finalidade
 Python 3.9+	                  Desenvolvimento principal
 PyWin32	                      Integração COM com Outlook
