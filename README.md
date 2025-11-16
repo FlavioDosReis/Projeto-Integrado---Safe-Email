@@ -3,15 +3,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 📘 Sobre o Projeto
 
 O SafeMail IA é um analisador automático de risco para e-mails do Outlook Desktop, desenvolvido em Python.
@@ -19,11 +10,13 @@ Ele identifica mensagens suspeitas, analisa anexos, URLs, padrões de phishing e
 
 O objetivo é aumentar a segurança corporativa, reduzir exposição a golpes e auxiliar usuários na tomada de decisão antes de abrir e-mails suspeitos.
 
+
+
 🚀 Funcionalidades
 
-📥 Leitura automática de e-mails via Outlook (MAPI/COM)
+📥Leitura automática de e-mails via Outlook (MAPI/COM)
 
-🕵️ Detecção de padrões suspeitos:
+Detecção de padrões suspeitos:
 
 palavras-chave maliciosas
 
@@ -33,9 +26,9 @@ anexos perigosos
 
 discrepâncias de remetente
 
-🧠 Pontuação heurística de risco (0 a 100)
+Pontuação heurística de risco (0 a 100)
 
-🟥 Classificação automática:
+Classificação automática:
 
 Baixo risco
 
@@ -43,29 +36,34 @@ Médio risco
 
 Alto risco
 
-📝 Geração de relatório CSV detalhado
+Geração de relatório CSV detalhado
 
-🏷️ Marcação automática no assunto do e-mail (opcional)
+Marcação automática no assunto do e-mail (opcional)
+
+
 
 🧩 Tecnologias Utilizadas
-Tecnologia	Finalidade
-Python 3.9+	Desenvolvimento principal
-PyWin32	Integração COM com Outlook
-difflib	Detecção de similaridade
-Regex (re)	Análise de URLs e padrões
-CSV	Exportação de relatórios
-Outlook Desktop	Origem dos e-mails analisados
+Tecnologia	                  Finalidade
+Python 3.9+	                  Desenvolvimento principal
+PyWin32	                      Integração COM com Outlook
+difflib	                      Detecção de similaridade
+Regex (re)	                  Análise de URLs e padrões
+CSV	                          Exportação de relatórios
+Outlook Desktop	              Origem dos e-mails analisados
+
+
+
 🔧 Requisitos
+
 Sistema
-
 Windows 10/11
-
 Outlook Desktop configurado
-
 Python 3.9+ instalado
 
 Instalação de dependências
 pip install pywin32
+
+
 
 📦 Instalação do Projeto
 
@@ -78,10 +76,11 @@ Acesse a pasta:
 
 cd safemail-ia
 
-
 Instale as dependências:
 
 pip install pywin32
+
+
 
 ▶️ Como Executar
 
@@ -89,8 +88,10 @@ Execute o script principal:
 
 python analisador_de_risco_outlook.py
 
-
 Certifique-se de que o Outlook esteja aberto ou configurado no Windows, pois o script acessa a caixa de entrada via MAPI.
+
+
+
 
 📊 Saídas do Sistema
 
@@ -117,6 +118,8 @@ classificação final
 ✔ Marcação no assunto:
 [Risco:ALTO] Assunto original
 
+
+
 ⚙️ Configurações
 
 Dentro do código, você pode ajustar:
@@ -133,6 +136,8 @@ Extensões perigosas
 
 Ativar/desativar marcação no assunto
 
+
+
 🧪 Testes Realizados
 
 Outlook Desktop com conta ativa
@@ -147,6 +152,8 @@ E-mails corporativos legítimos
 
 Performance com +500 mensagens
 
+
+
 👨‍💻 Autores
 
 Equipe de desenvolvimento:
@@ -160,6 +167,8 @@ Flavio Perussi Bertão dos Reis
 João Pedro Dutra da Silva
 
 Gabriel Trinca de Marchi
+
+
 
 📈 Melhorias Futuras
 
