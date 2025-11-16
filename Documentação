@@ -1,0 +1,123 @@
+Relatório Técnico Documentado do Projeto Integrado
+1.   Identificação do Projeto
+Título do Projeto: SafeMail IA – Analisador de e-mails
+Período de Desenvolvimento: 01/11/2025 a 25/11/2025
+Nome do(s) Aluno(s):  Maicon Bruno Corrêa da Silva
+Antonio Tiago Zaneratto
+Flavio Perussi Bertão dos Reis
+João Pedro Dutra da Silva
+Gabriel Trinca de Marchi
+2.   Introdução
+No ambiente corporativo da Agro Zaneratto, inscrita no CNPJ 07.968.737/0001-41, foi identificada uma dificuldade recorrente relacionada ao recebimento de grande quantidade de e-mails indesejados (spams) e mensagens potencialmente maliciosas. Essa situação afeta diretamente a rotina administrativa da empresa, prejudicando a produtividade dos colaboradores e aumentando o risco de exposição a golpes de engenharia social, como ataques de phishing. No contexto da Agro Zaneratto, observou-se que os colaboradores enfrentam dificuldades em identificar e-mails suspeitos, o que representa um risco à segurança da informação e à integridade dos sistemas internos. Diante dessa situação, surgiu a necessidade de desenvolver uma ferramenta automatizada capaz de auxiliar na detecção de mensagens potencialmente perigosas.
+
+O projeto “SafeMail IA” tem como principal objetivo criar uma solução baseada em Inteligência Artificial que analisa o conteúdo textual de e-mails e atribui uma pontuação de risco (Baixo, Médio ou Alto). Dessa forma, o sistema atua como um apoio preventivo, ajudando os usuários a tomarem decisões mais seguras antes de interagir com o conteúdo de mensagens potencialmente fraudulentas. Além de contribuir para a redução de incidentes de segurança, o projeto busca promover conscientização e boas práticas de cibersegurança entre os funcionários, fortalecendo a cultura de proteção digital dentro da organização.
+3.   Objetivos
+3.1  Objetivo Geral
+Desenvolver uma inteligência artificial capaz de acessar a caixa de entrada de serviços de e-mail Outlook, analisar o conteúdo das mensagens recebidas e classificá-las automaticamente em níveis de prioridade de risco — baixo, médio e alto — com base em critérios como urgência, tipo de conteúdo, remetente e padrões linguísticos que indiquem relevância ou ameaça. Além da classificação inteligente, o projeto tem como propósito fortalecer a segurança da informação dentro da organização, reduzindo a exposição a ataques de engenharia social, phishing e outras formas de fraude digital. A ferramenta busca atuar como uma camada adicional de proteção, auxiliando na identificação precoce de mensagens maliciosas e contribuindo para um ambiente corporativo mais seguro, confiável e alinhado às boas práticas de proteção de dados.
+3.2  Objetivos Específicos
+Integrar a IA com as APIs do Gmail e Outlook para leitura automatizada de e-mails; implementar um sistema de extração de informações relevantes dos e-mails (assunto, corpo, remetente); desenvolver um modelo de classificação que atribua níveis de risco (baixo, médio, alto) utilizando regras simples; treinar e validar o modelo com exemplos reais de e-mails categorizados por prioridade; automatizar a organização dos e-mails em pastas ou etiquetas específicas conforme o nível de risco atribuído; garantir a segurança, integridade e privacidade dos dados acessados durante o todo o processo de análise, adotando boas práticas de segurança da informação, como criptografia, controle de acesso, tratamento responsável de dados e conformidade com normas como a LGPD.
+Reduzir a exposição da organização a ameaças digitais, contribuindo para um ambiente mais seguro por meio da prevenção de golpes de phishing, spam malicioso e tentativas de engenharia social.
+4.   Fundamentação Teórica
+O projeto de análise de risco de e-mails tem como objetivo identificar mensagens suspeitas ou potencialmente maliciosas dentro do ambiente corporativo, classificando-as em níveis de risco (baixo, médio e alto). Para isso, são utilizados conceitos de segurança da informação, ciência de dados, inteligência artificial e integração com sistemas de e-mail.
+Linguagem de Programação Python, foi escolhida pela simplicidade de sintaxe, extensa comunidade de desenvolvedores e disponibilidade de bibliotecas para automação, análise de texto e integração com serviços corporativos.
+Bibliotecas principais: pywin32: permite interação com o Outlook Desktop via COM, possibilitando leitura de e-mails, anexos e propriedades da mensagem. re (expressões regulares): utilizada para extração de padrões, como URLs e palavras-chave. csv: para exportação de relatórios em formato estruturado. difflib: cálculo de similaridade entre strings, útil para detectar discrepâncias entre nomes de remetentes e domínios.
+O projeto foi desenvolvido utilizando metodologia ágil e interativa, permitindo testes e ajustes contínuos das regras heurísticas de classificação de risco.
+5.   Metodologia
+O desenvolvimento do projeto de analisador de risco de e-mails no Outlook seguiu uma metodologia estruturada, combinando etapas de planejamento, implementação e validação.
+
+Divida em cinco etapas de desenvolvimento:
+1 – Levantamento de requisitos: Identificação das necessidades do usuário e objetivos do projeto, definição de tipos de riscos a serem detectados: phishing, anexos maliciosos, links suspeitos e spoofing de remetente e determinação das métricas de classificação de risco.
+2- Pesquisa Teórica e Tecnológica: Estudo sobre engenharia social, phishing, spoofing e segurança de e-mails, levantamento de tecnologias e bibliotecas disponíveis em Python para automação do Outlook e análise de dados.
+3 - Planejamento do Sistema: Estruturação das regras heurísticas para análise de e-mails, definição de fluxos de classificação: extração de remetente, assunto, corpo, anexos e links; cálculo de pontuação; categorização do risco.
+4 - Desenvolvimento e Implementação: Implementação do código em Python utilizando bibliotecas como pywin32, re e difflib, criação de funções para leitura de e-mails, análise de conteúdo, detecção de links e anexos suspeitos, e cálculo da pontuação de risco e geração de relatórios em CSV e marcação de e-mails dentro do Outlook conforme classificação.
+5 - Testes e Validação: Execução do analisador em um conjunto de e-mails de teste para validar a eficácia das heurísticas, ajuste de pesos, limiares e regras de classificação para reduzir falsos positivos e negativos.
+ 
+Ferramentas utilizadas
+Python: linguagem de programação principal para desenvolvimento do analisador.
+PyWin32: integração com o Outlook Desktop para leitura e manipulação de e-mails.
+Re: identificação de padrões em textos, como URLs e palavras-chave.
+Difflib: verificação de similaridade entre nomes de remetentes e domínios.
+CSV/Pandas: exportação e manipulação de dados para relatórios.
+Microsoft Outlook: fonte de dados, ambiente corporativo para teste e execução do sistema.
+Ambiente Windows: plataforma necessária para execução do Outlook via COM/MAPI.
+Estratégias de trabalho
+
+Trabalho em grupo, divisão de tarefas entre análise teórica, desenvolvimento de código, testes e documentação. Colaboração constante via reuniões periódicas para alinhar etapas e resolver dúvidas técnicas.
+
+Aplicação de abordagem incremental, testando funcionalidades individuais e integradas antes da finalização. Feedback constante sobre acurácia e confiabilidade do sistema para ajustes necessários.
+ 
+6.   Desenvolvimento
+Criar um script em Python capaz de analisar automaticamente e-mails no Outlook Desktop, identificando riscos comuns de phishing, anexos perigosos, URLs suspeitas e inconsistências no remetente.
+O script deve: Acessar a conta do Outlook via MAPI usando pywin32;
+Ler e-mails da pasta desejada (por padrão Inbox); Aplicar heurísticas de segurança para calcular risco (0–100); Classificar cada e-mail como Baixo, Médio ou Alto risco; Registrar tudo em um arquivo CSV; Opcionalmente adicionar prefixo ao assunto para marcar a classificação; Limitar a quantidade analisada (para não travar o Outlook); Não depender de consultas externas (ex.: WHOIS), por isso o domain age foi deixado como zero. Modelagem das heurísticas
+O sistema foi projetado usando pontuações somadas para cada evidência de risco:
+Palavras suspeitas em HTML/texto, Tipos de anexos potencialmente perigosos ,URLs duvidosas, Links cujo texto não corresponde ao domínio real (phishing clássico), Similaridade entre domínio do remetente e domínios das URLs.
+Protótipos Durante o desenvolvimento, foram criados protótipos funcionais separados antes da integração final: Protótipo de leitura de e-mails via Outlook/MAPI, Testes simples de conexão com o Outlook. outlook = win32.Dispatch("Outlook.Application").GetNamespace("MAPI")
+inbox = outlook.Folders.Item(1).Folders["Inbox"]
+Leitura básica de assunto, remetente e corpo, Protótipo de extração de URLs, Teste da regex para identificar links em corpo HTML e texto puro, Protótipo de análise de anexos, Verificar extensão e identificar anexos perigosos (.exe, .js, .docm, etc.). Protótipo de sistema de pontuação, Testes isolados de risco por palavras, anexos e links. Cada protótipo foi validado individualmente, depois integrado ao código final.
+Implementação das funcionalidades, Após os protótipos validados, o projeto final foi estruturado com blocos principais, Configurações iniciais; Parâmetros ajustáveis, Pasta alvo, número máximo de e-mails a processar, palavras suspeitas,extensões perigosas, pesos das heurísticas
+Funções auxiliares foram criadas funções para:
+Extrair URLs (extract_urls_from_text), Obter domínio de URL (get_domain), Detectar palavras-chave suspeitas (text_contains_keyword). Avaliar risco de anexos (attachment_risk_score)
+
+Verificar similaridade entre domínios (domain_similarity)
+Detectar links em HTML cujo texto aponta para domínio diferente do link real
+(tática comum em phishing)
+
+3. Conexão com Outlook
+Obtenção da pasta definida
+Iteração sobre os e-mails (limitado pelo MAX_EMAILS)
+
+4. Análise de cada e-mail
+Para cada mensagem foram aplicadas todas as heurísticas:
+Keywords → risco. Anexos perigosos, URLs suspeitas, Mismatch remetente/domínio.
+Links falsos (texto ≠ domínio real). Contagem de destinatários. A soma resulta na pontuação final (0 a 100).
+
+
+5. Classificação 
+Com base na pontuação:
+≤ 25 → Risco Baixo
+26–55 → Risco Médio
+> 55 → Risco Alto
+
+6. Marcação do assunto do e-mail
+Se ativado:
+[Risco:ALTO] Assunto original
+
+7. Geração do CSV
+Cada e-mail analisado gera uma linha contendo:
+Data, Assunto, Remetente, Número de anexos, Palavras suspeitas encontradas, Lista de URLs, Pontuação e classificação final.
+
+Testes Realizados, Ambiente de testes; Windows 10 e Windows 11; Outlook Desktop configurado com conta ativa; Biblioteca pywin32 corretamente instalada.
+Testes de leitura e acesso ao Outlook;  Verificação de acesso à pasta Inbox; Testes com pastas em português ;Testes com e-mails reais e simulados;Foram testados: E-mails com anexos seguros (PDF, JPG), E-mails com anexos perigosos (arquivo .exe renomeado para teste), Mensagens de phishing simuladas contendo: "Atualize sua senha", "Fatura em atraso", "Clique aqui",URLs mascaradas, HTML com links falsos (texto vs. href).
+
+Testes de URLs URLs completas, Testes de performance; Análise de 500 e-mails → dentro do tempo esperado
+Verificação de não travamento do Outlook
+e) Teste do CSV
+Conferência de estrutura
+Caracteres HTML escapando corretamente
+Suporte a UTF-8
+f) Teste de marcação do assunto
+Verificar se não quebrava threads de conversa
+Confirmar que o Outlook permite editar o assunto de mensagens já recebidas.
+7.   Resultados Obtidos
+O desenvolvimento do projeto SafeMail IA – Analisador de E-mails, resultou na implementação de um sistema funcional capaz de identificar, classificar e sinalizar riscos em mensagens recebidas no ambiente corporativo da Agro Zaneratto. 
+
+Principais funcionalidades implementadas foram: Leitura automatizada de e-mails no Outlook por meio da biblioteca pywin32, permitindo acesso ao assunto, corpo, remetente, anexos e metadados relacionados a cada mensagem; Extração identificação de padrões suspeitos, incluindo: links potencialmente maliciosos, anexos incomuns,palavras-chave associadas a golpes de phishing e discrepâncias entre nome do remetente e domínio; Sistema de pontuação e classificação que categoriza cada e-mail como Baixo, Médio ou Alto Risco, com base em regras heurísticas e critérios definidos durante o levantamento de requisitos.
+
+Principais benefícios esperados foram: Aumento da segurança da informação, com identificação precoce de e-mails maliciosos, reduzindo riscos de phishing, engenharia social e vazamento de dados; Maior produtividade dos colaboradores, ao evitar tempo perdido com mensagens não desejadas ou suspeitas; Mitigação de incidentes de segurança, através de uma triagem automatizada e confiável; Fortalecimento da cultura de cibersegurança, promovendo boas práticas e conscientização contínua entre os funcionários; Suporte à tomada de decisão, permitindo que usuários avaliem rapidamente o nível de risco de cada e-mail antes de interagir com ele.
+8.   Dificuldades e Aprendizados
+Durante o desenvolvimento do projeto SafeMail IA, diversos desafios técnicos e operacionais foram enfrentados pela equipe. Um dos principais obstáculos foi a integração com o Outlook via biblioteca pywin32, que exigiu compreensão aprofundada do funcionamento da interface COM e das permissões necessárias para acessar e manipular mensagens de e-mail no ambiente Windows. Esse processo demandou testes e ajustes para garantir a estabilidade da leitura e classificação dos e-mails.
+Outra dificuldade encontrada foi a definição de regras heurísticas eficazes para a detecção de mensagens suspeitas. A identificação de padrões linguísticos, links suspeitos, discrepâncias de remetente e sinais típicos de phishing exigiu estudo detalhado sobre segurança da informação e engenharia social. Além disso, foi necessário ajustar pesos para evitar falsos positivos e falsos negativos, garantindo maior precisão na classificação de risco.
+
+A manipulação de dados sensíveis também trouxe a necessidade de aprofundamento em práticas de proteção e conformidade com a LGPD, reforçando a importância de tratar informações corporativas com responsabilidade e segurança.
+
+Entre os principais aprendizados adquiridos, destacam-se: Maior domínio da linguagem Python e de bibliotecas voltadas à automação e análise textual; Compreensão prática sobre mecanismos de segurança de e-mail e vulnerabilidades associadas; Experiência com metodologia ágil, colaboração em equipe e divisão de tarefas; Desenvolvimento de pensamento crítico na criação de sistemas de análise de risco baseados em IA.
+
+	Essas experiências contribuíram para o crescimento técnico do grupo e proporcionaram uma visão mais ampla sobre como soluções de inteligência artificial podem ser aplicadas em ambientes corporativos reais.
+9.   Considerações Finais
+O projeto SafeMail IA – Analisador de E-mails demonstrou ser uma solução viável e de grande relevância para o ambiente corporativo da Agro Zaneratto, atendendo à necessidade de identificar e mitigar riscos relacionados ao recebimento de mensagens suspeitas. A ferramenta desenvolvida mostrou-se eficaz na triagem automática de e-mails, contribuindo para a segurança da informação, a produtividade dos colaboradores e a prevenção de incidentes de engenharia social.
+Além do impacto imediato, o projeto reforça a importância de incorporar tecnologias de inteligência artificial em processos internos, especialmente em áreas críticas como comunicação corporativa e proteção de dados. A iniciativa também promove a conscientização dos funcionários, fortalecendo a cultura de cibersegurança dentro da organização.
+Como sugestões de melhorias futuras, destacam-se: Implantação de modelos de aprendizado de máquina mais avançados para aumentar a precisão da classificação; Criação de uma interface gráfica dedicada para visualização de alertas e relatórios; Ampliação da compatibilidade com outros provedores de e-mail além de Outlook e Gmail; Adoção de técnicas adicionais de análise de anexos e sandboxing para detecção aprofundada de ameaças.
+Em conclusão, o projeto proporcionou não apenas uma solução funcional, mas também um importante aprendizado coletivo, demonstrando o potencial da IA para aprimorar processos corporativos e garantir maior nível de proteção no ambiente digital.
+
+
