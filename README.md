@@ -14,7 +14,7 @@ O objetivo é aumentar a segurança corporativa, reduzir exposição a golpes e 
 
 🚀 Funcionalidades
 
-📥Leitura automática de e-mails via Outlook (MAPI/COM)
+Leitura automática de e-mails via Outlook (MAPI/COM)
 
 Detecção de padrões suspeitos:
 
